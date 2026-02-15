@@ -11,7 +11,7 @@ public class Solution2 {
         }
 
         System.out.println(current + " ");
-
+ 
         printNumbers(current + 1, n);
     }
 
