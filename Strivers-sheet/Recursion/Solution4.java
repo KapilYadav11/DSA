@@ -1,5 +1,6 @@
 package Recursion;
 
+//Given a number 'N', find out the sum of the first N Natural numbers;
 public class Solution4 {
     public int sumOfNaturalNumbers(int N){
 
