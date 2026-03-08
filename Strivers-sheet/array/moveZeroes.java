@@ -22,9 +22,7 @@ public class moveZeroes {
                 nums[j] = temp;
                 j++;
             }
-
         }
-
     }
 
     public static void main(String[] args) {
