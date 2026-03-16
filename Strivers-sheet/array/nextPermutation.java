@@ -65,3 +65,6 @@ public class nextPermutation {
 
     }
 }
+
+
+//not much understood , try again
