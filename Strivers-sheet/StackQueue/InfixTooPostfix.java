@@ -1,3 +1,6 @@
+//Problem Statement: Given an infix expression, Your task is to convert the given infix expression to a postfix expression.
+
+
 import java.util.Stack;
 
 public class InfixTooPostfix {
@@ -57,5 +60,6 @@ public class InfixTooPostfix {
         String exp = "(p+q)*(m-n)"; 
         System.out.println("Infix expression " + exp);
         System.out.println(exp);
+        infixToPostfixConver(exp);
     }
 }

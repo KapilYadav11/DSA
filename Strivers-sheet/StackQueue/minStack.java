@@ -1,3 +1,6 @@
+//Problem Statement: Design a stack that supports the following operations in constant time: push, pop, top, and retrieving the minimum element.
+
+
 import java.util.Stack;
 
 public class minStack {
@@ -66,3 +69,7 @@ public class minStack {
         System.out.print(s.getMin());       // Output: -2
     }
 }
+
+
+
+// samajh nhi aaya try karna hai isko baar-baar 
