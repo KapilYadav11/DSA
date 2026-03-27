@@ -30,3 +30,5 @@ public class LargestRectangle {
         System.out.println("The largest area in the histogram is " + largestArea(arr, n));
     }
 }
+
+// NOT UNDERSTOOD MUCH , TRY AGAIN TO KNOW ABOUT IT MORE 
