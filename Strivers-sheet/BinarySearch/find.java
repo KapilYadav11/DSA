@@ -23,7 +23,7 @@ public class find {
         int n = arr.length;
         find sol = new find();
         int ans = sol.findTarget(arr, target, n);
-        System.out.println(ans);
+        System.out.println("The index value of the BS is: " + ans);
     }
     
 }
