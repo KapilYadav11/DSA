@@ -14,7 +14,7 @@ public class manyTimes {
 
     }
     public static void main(String[] args) {
-        int[] arr = {5,4,3,1,2};
+        int[] arr = {Z5,4,3,1,2};
         manyTimes sol = new manyTimes();
         int result = sol.findHowManyTimes(arr);
         System.out.println("The no of times rotation is as : " + result);
