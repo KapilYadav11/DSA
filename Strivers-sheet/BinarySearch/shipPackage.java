@@ -45,7 +45,7 @@ public class shipPackage {
          int d = 5;
          shipPackage sol = new shipPackage();
          int res = sol.shipWithinDays(weights, d);
-         System.out.println("The least capacity to ship the package with D days is as : " + res );
+         System.out.println("Capacity to Ship Packages within D Days : " + res );
      }
 }
 
