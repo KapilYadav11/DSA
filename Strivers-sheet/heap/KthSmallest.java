@@ -21,6 +21,6 @@ public class KthSmallest {
         int k = 4;
         KthSmallest sol = new KthSmallest();
         int res = sol.findKthSmallestElement(arr, k);
-        System.out.println("The kth smallest element is: " + res);
+        System.out.println("The kth smallest element is: " + res);  
     }
 };
