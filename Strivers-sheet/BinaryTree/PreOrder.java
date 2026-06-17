@@ -1,11 +1,12 @@
 import java.util.ArrayList;
+import java.util.List; 
 
-class Node{
+class Node {
     int data;
     Node left;
     Node right;
 
-    Node(int val){
+    Node(int val) {
         data = val;
         left = null;
         right = null;
@@ -13,8 +14,8 @@ class Node{
 }
 
 public class PreOrder {
-    public void preorder(Node root, java.util.List<Integer> arr){
-        if(root == null){
+    public void preorder(Node root, List<Integer> arr) {
+        if (root == null) {
             return;
         }
 
@@ -23,14 +24,13 @@ public class PreOrder {
         preorder(root.right, arr);
     }
 
-    public java.util.List<Integer> preOrder(Node root){
-        java.util.List<Integer> arr = new java.util.ArrayList<>();
+    public List<Integer> preOrder(Node root) {
+        List<Integer> arr = new ArrayList<>(); 
         preorder(root, arr);
         return arr;
     }
 
-     public static void main(String[] args) {
-
+    public static void main(String[] args) {
         // Creating a sample binary tree
         Node root = new Node(1);
         root.left = new Node(2);
@@ -39,7 +39,7 @@ public class PreOrder {
         root.left.right = new Node(5);
 
         PreOrder sol = new PreOrder();
-        java.util.List<Integer> result = sol.preOrder(root);
+        List<Integer> result = sol.preOrder(root);
 
         System.out.print("Preorder Traversal: ");
         for (int val : result) {
