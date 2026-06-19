@@ -38,7 +38,7 @@ public class InOrder {
         InOrder sol = new InOrder();
         List<Integer> result = sol.inOrder(root);
 
-        System.out.print("Preorder Traversal: ");
+        System.out.print("Inorder Traversal: ");
         for (int val : result) {
             System.out.print(val + " ");
         }

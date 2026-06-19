@@ -37,7 +37,7 @@ public class PostOrder {
         PostOrder sol = new PostOrder();
         List<Integer> result = sol.postOrder(root);
 
-        System.out.print("Preorder Traversal: ");
+        System.out.print("Postorder Traversal: ");
         for (int val : result) {
             System.out.print(val + " ");
         }
