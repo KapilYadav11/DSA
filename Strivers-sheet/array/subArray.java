@@ -3,40 +3,35 @@
 import java.util.HashMap;
 
 public class subArray {
-    public int subArraySum(int[] arr, int k){
-        int n = arr.length;
+    public int subarraySum(int[] nums, int k) {
+        int n = nums.length;
 
-        HashMap<Integer, Integer> prefixSumCount = new HashMap<>();
-        
+        HashMap<Integer, Integer> mpp = new HashMap<>();
+        int cnt = 0;
         int prefixSum = 0;
-        int count = 0;
 
-        prefixSumCount.put(0, 1);
+        mpp.put(0,1);
 
         for(int i = 0; i < n; i++){
-            prefixSum += arr[i];
+            prefixSum += nums[i];
             int remove = prefixSum - k;
-
-            if(prefixSumCount.containsKey(remove)){
-                count += prefixSumCount.get(remove);
+            
+            if(mpp.containsKey(remove)){
+                cnt += mpp.get(remove);
             }
 
-            prefixSumCount.put(prefixSum, prefixSumCount.getOrDefault(prefixSum, 0) + 1);
-
+            mpp.put(prefixSum, mpp.getOrDefault(prefixSum, 0) + 1);
         }
-        return count;
+
+        return cnt;
     }
 
-    public static void main(String [] args){
+    public static void main(String[] args) {
         subArray sol = new subArray();
-        int[] arr = {3,1,2,4};
-        int k = 6;
-        subArray obj = new subArray();
-
-    
-        int result = obj.subArraySum(arr, k);
-
-        System.out.println("The number of subarrays is: " + result);
+        int[] arr = {1,1,1};
+        int k = 2;
+        int res = sol.subarraySum(arr, k);
+        System.out.println("ans is: " + res);
     }
 }
 
