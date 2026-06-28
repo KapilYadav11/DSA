@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ThreeSum {
-  public List<List<Integer>> threeSum(int[] nums) {
+    public List<List<Integer>> threeSum(int[] nums) {
         int n = nums.length;
         Arrays.sort(nums);
         List<List<Integer>> ans = new ArrayList<>();
@@ -14,12 +14,12 @@ public class ThreeSum {
             }
 
             int left = i + 1, right = n - 1;
-            
+
             while (left < right) {
                 int sum = nums[i] + nums[left] + nums[right];
-                
+
                 if (sum == 0) {
-                    ans.add(Arrays.asList(nums[i], nums[left], nums[right])); 
+                    ans.add(Arrays.asList(nums[i], nums[left], nums[right]));
                     left++;
                     right--;
 
@@ -39,14 +39,16 @@ public class ThreeSum {
 
         return ans;
     }
+
     public static void main(String[] args) {
         ThreeSum sol = new ThreeSum();
-        int[] arr = {-1, 0, 1, 2, -1, -4};
-        
-        List<List<Integer>> res = sol.threeSum(arr); 
+        int[] arr = { -1, 0, 1, 2, -1, -4 };
+
+        List<List<Integer>> res = sol.threeSum(arr);
 
         for (List<Integer> triplet : res) {
-            for (int num : triplet) System.out.print(num + " ");
+            for (int num : triplet)
+                System.out.print(num + " ");
             System.out.println();
         }
     }
