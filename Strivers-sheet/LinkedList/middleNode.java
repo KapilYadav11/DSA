@@ -15,32 +15,47 @@ Node(int data){
 }
 }
 public class middleNode {
+
     public static Node findMiddle(Node head){
-        if(head == null || head.next == null){
-            return head;
+        Node slow = head;
+        Node fast = head;
+
+        while (fast != null && fast.next != null && slow != null) {
+            fast = fast.next.next;
+            slow = slow.next;
         }
-
-        Node temp = head;
-        int count = 0;
-        
-        while (temp != null) {
-            count++;
-            temp = temp.next;
-        }
-
-        int mid = count / 2 + 1;
-        temp = head;
-
-        while (temp != null) {
-            mid = mid - 1;
-
-            if(mid == 0){
-                break;
-            }
-            temp = temp.next;
-        }
-        return temp;
+        return slow;
     }
+
+
+
+    // BRUTE FORCE APPROACH
+    // public static Node findMiddle(Node head){
+    //     if(head == null || head.next == null){
+    //         return head;
+    //     }
+
+    //     Node temp = head;
+    //     int count = 0;
+        
+    //     while (temp != null) {
+    //         count++;
+    //         temp = temp.next;
+    //     }
+
+    //     int mid = count / 2 + 1;
+    //     temp = head;
+
+    //     while (temp != null) {
+    //         mid = mid - 1;
+
+    //         if(mid == 0){
+    //             break;
+    //         }
+    //         temp = temp.next;
+    //     }
+    //     return temp;
+    //}
 
     public static void main(String[] args) {
         Node head =  new Node(1);
